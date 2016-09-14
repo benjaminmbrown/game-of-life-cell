@@ -10,7 +10,7 @@ var Cell = function(_x,_y,_w){
  	this.previousState = this.state;
 
  	this.savePreviousState = function(){
- 		this.previous = this.state;
+ 		this.previousState = this.state;
  	}
 
  	this.newState = function(s){
@@ -19,17 +19,17 @@ var Cell = function(_x,_y,_w){
 
 	this.display = function(){
 
-		if(this.previousState == 0 && this.state == 1){
+		if(this.previousState === 0 && this.state == 1){
 			fill(0,0,255);
 		}
-		else if(this.previousState == 1 && this.state == 0){
+		else if(this.previousState == 1 && this.state === 0){
 			fill(0,255,0);
 		}
 		else if(this.state ==1){fill(0)}
 		else {fill(255)}
 
-		stroke(0);
-		rect(this.x,this.y,this.w);
+		stroke(1);
+		rect(this.x,this.y,this.w,this.w);
 
 	}
 }

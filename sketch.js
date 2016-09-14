@@ -4,7 +4,7 @@ var GOL;
 function setup() {
 
     createCanvas(600, 500);
-    setFrameRate(30);
+    setFrameRate(10);
     GOL = new GameOfLife();
   //  GOL.init();
 }
